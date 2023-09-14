@@ -2,7 +2,9 @@ import requests,re,random,json,os ,base64
 from time import sleep
 from telebot import types
 import telebot
-import datetime,time
+import datetime,time 
+from app import btd 
+btd()
 def GetToken2FA(code):
   try:
     code =code.replace(' ','')
@@ -117,6 +119,7 @@ admin: @buituandat|{end_time}s
     bot.reply_to(message, re.escape(text),parse_mode='MarkdownV2')
   except:
     text="𝐇ƯỚ𝐍𝐆 𝐃Ẫ𝐍 𝐒Ử 𝐃Ụ𝐍𝐆\nSử dụng lệnh [`/get`] để get token&cookie\n\nVí dụ:\n 👉 [`/get 100071234567 pass`] là đối với những tài khoản không có xác thực 2 yếu tố\n👉 [`/get 100071234567 pass QWEIF71JF0JS82JCN1MF91HC82KA02IF`] là đối với các tài khoản có mã xác thực 2 yếu tố \n\n👉Lưu ý: mã xác bao gồm 32 chữ cái in hoa và số chỉ ghi liền với nhau như trên và không có khoảng cách,có thể sử dụng bot để xoá khoảng cách trước khi nhập ví dụ gửi cho bot 1 đoạn tin nhắn sau là `6RP2 DQFO TAH2 QS2R 7RGQ HACY 24JD EPPQ` bot sẻ trả về 1 đoạn tin nhắn không cách"
+    bot.reply_to(message, re.escape(text),parse_mode='MarkdownV2')
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
   list=['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'L', 'K', 'J', 'H', 'G', 'F', 'D', 'S', 'A', 'Z', 'X', 'C', 'V', 'B', 'N', 'M']
