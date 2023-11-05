@@ -1,15 +1,6 @@
 from flask import Flask
-from threading import Thread
-
-app = Flask('')
+app = Flask(__name__)
 
 @app.route('/')
-def home():
-    return "Bot Get UID By Bùi Tuấn Đạt "
-
-def runn():
-  app.run()
-
-def btd():
-    t = Thread(target=runn)
-    t.start()
+def hello_world():
+    return 'Hello, World!'
